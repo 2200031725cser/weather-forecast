@@ -4,7 +4,7 @@ import random
 from django.shortcuts import render
 from datetime import datetime
 
-API_KEY = '3ecb8502d8eab1a006725520b48e2039'
+API_KEY = 'YOUR_API_KEY'
 GEO_URL = "https://api.openweathermap.org/geo/1.0/direct"
 WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather"
 FORECAST_URL = "https://api.openweathermap.org/data/2.5/forecast"
@@ -138,3 +138,4 @@ def index(request):
             weather_data = {'error': f"Something went wrong: {str(e)}"}
 
     return render(request, 'index.html', {'weather_data': weather_data})
+
